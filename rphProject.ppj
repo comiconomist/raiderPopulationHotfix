@@ -1,0 +1,16 @@
+<?xml version='1.0'?>
+<PapyrusProject xmlns="rphProject.ppj"
+  Flags="Institute_Papyrus_Flags.flg"
+  Output="C:\Games\fo4_modding\raiderPopulationHotfix"
+  Optimize="false"
+  Release="false"
+  Final="false"
+>
+  <Imports>
+    <Import>C:\Games\fo4_modding\raiderPopulationHotfix</Import>
+    <Import>C:\Steam\steamapps\common\Fallout 4\Data\Scripts\Source\Base</Import>
+  </Imports>
+  <Scripts>
+    <Script>rph:DLC04WorkshopParentScript</Script>
+  </Scripts>
+</PapyrusProject>
