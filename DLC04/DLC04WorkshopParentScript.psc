@@ -1,4 +1,4 @@
-Scriptname rph:DLC04WorkshopParentScript extends WorkshopAddLocationsScript conditional
+Scriptname DLC04:DLC04WorkshopParentScript extends WorkshopAddLocationsScript conditional
 
 import WorkshopDataScript
 
@@ -680,9 +680,8 @@ function DailyUpdateRaiderSettlement(WorkshopDataScript:WorkshopRatingKeyword[] 
 	;----------------------------------------------------------
 	; Added by RPH 1.0.0 - extra debug messages
 	;----------------------------------------------------------
-	debug.trace("Commencing daily update with Raider Population Hotfix")
-	debug.Notification("Commencing daily update with Raider Population Hotfix")
-	
+	debug.trace("RPH - Commencing daily update.")
+
 	debug.trace(self + " DailyUpdateRaiderSettlement " + workshopRef)
 	if DLC04PlayerKickedOut.GetValue() == 0.0
 		; update happiness for farming
@@ -728,7 +727,13 @@ function DailyUpdateRaiderSettlement(WorkshopDataScript:WorkshopRatingKeyword[] 
 		endif
 
 		; attract new NPCs
+		;----------------------------------------------------------
+		; Added by RPH 1.0.0 - extra debug messages
+		;----------------------------------------------------------
+		debug.trace("RPH - Thinking about recruiting new NPCs.")
 		if bAllowRaiderRecruitment
+			debug.trace("RPH - raider recruitment allowed")
+			debug.trace("RPH - Current pop is " + totalPopulation + " and max pop is " + workshopRef.GetMaxWorkshopNPCs())
 			if totalPopulation < workshopRef.GetMaxWorkshopNPCs() && currentHappiness >= raiderPopulationMinHappiness
 				;WorkshopParent.wsTrace(self + "       RADIO - unassigned population=" + updateData.unassignedPopulation)
 				float attractChance = attractNPCDailyChance + currentHappiness/100 * attractNPCHappinessMult

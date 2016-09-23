@@ -11,6 +11,6 @@
     <Import>C:\Steam\steamapps\common\Fallout 4\Data\Scripts\Source\Base</Import>
   </Imports>
   <Scripts>
-    <Script>rph:DLC04WorkshopParentScript</Script>
+    <Script>DLC04:DLC04WorkshopParentScript</Script>
   </Scripts>
 </PapyrusProject>
